@@ -12,39 +12,50 @@ body{
 }
 
 nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     background-color: #1A4870;
     color: white;
-    /* position: fixed; */
 }
-
-nav{
-    display: flex;
-    align-items: flex-end;
+nav p{
+    font-size: 30px;
     padding: 10px;
+    font-weight: bold;
 }
 
-
-
-nav h1 {
-    font-size: 40px;
+.logo{
+    width: 140px;
 }
-nav ul{
-    flex: 1;
-    font-size: 20px;
-}
-nav div{
-    flex: 2;
-}
-
-.nav-links{
-    display: flex;
-    gap: 30px;
-    justify-content: flex-start;
-}
-
-.nav-link{
+nav ul li{
+    display: inline-block;
     list-style: none;
+    margin: 10px 20px;
 }
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    /* background: #ff004f; */
+    background: #EEEEEE;
+    background: #DDE6ED;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+
 
 /* Main */
 main{
@@ -54,7 +65,7 @@ main{
     margin: auto;
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1.5fr;
     grid-template-rows: 2fr 1fr;
     padding: 10px;
     background-image: url("images/rainy.jpeg");
@@ -206,9 +217,66 @@ i:hover{
 }
 
 
+
 footer{
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
+    /* width: 100%; */
     text-align: center;
+    padding: 25px 0;
+    background: #1A4870;
+    font-weight: 300;
+    margin-top: 20px;
+    color: white;
+}
+footer a{
+    color: white;
+    margin-left: 20px;
+}
+footer i{
+    font-size: 25px;
+    transition: transform 0.5s ease;
+}
+footer i:hover{
+    transform: rotate(360deg); /* Rotates the element 45 degrees */
+}
+
+/* Small displays */
+nav .fas{
+    display: none;
+}
+@media (max-width: 600px) {
+    /* Your CSS rules here */
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    nav .fas{
+        display: block;
+        font-size:25px;
+    }
+
+    nav ul{
+        background: #ff004f;
+        background: #1A4870;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
 }

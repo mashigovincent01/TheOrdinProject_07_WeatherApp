@@ -10,17 +10,24 @@
 </head>
 <body>
     
+    
+
     <nav>
-        <div>
-            <h1>WeatherWise</h1>
+        <div class="logo">
+            <p>WeatherWise</p>
         </div>
-        <ul class="nav-links">
-            <li class="nav-link">Today</li>
-            <li class="nav-link">Hourly</li>
-            <li class="nav-link">Daily</li>
+        <ul id="sidemenu">
+            <li><a href="#">Hourly</a></li>
+            <li><a href="#">Daily</a></li>
             
+            <!-- <li><i class="fa-solid fa-moon" id="theme" onclick="toggleTheme()"></i></li> -->
+            
+            <i class="fas fa-times" onclick="closemenu()"></i>
         </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+        
     </nav>
+    
     <main>
 
         <div id="weather-info">
@@ -34,7 +41,7 @@
                 <div id="current-temp"><p>19</p> <span>&deg;C</span></div>
                 <p id="current-condition">Partly Cloudy</p>
                 
-            </div><p id="description">Partly cloudy throughout the day with late afternoon rain.</p>
+            </div>
         </div>
         
         <div id="weather-condition">
@@ -49,7 +56,7 @@
         </div>
     </main>
     <footer>
-        by Mashigo VM &copy;2024
+        by Mashigo VM &copy;2024 <a href="https://github.com/mashigovincent01"><i id="github-icon" class="fa-brands fa-github"></i></a>
     </footer>
     <script src="index.js"></script>
 </body>

@@ -1,5 +1,14 @@
 
 
+//section 2
+var sidemenu = document.querySelector("#sidemenu");
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
 
 async function search(){
   let location = document.querySelector("input").value;
@@ -11,6 +20,7 @@ async function search(){
       const days = data.days;
       todaysWeatherConditions(days[0]);
       daysWeather(days);
+      updateImage(data.currentConditions);
       currentConditions(data.currentConditions, data.address, days[0].description);
       
     } catch (error) {
@@ -28,6 +38,7 @@ async function defaultLocation(){
       todaysWeatherConditions(days[0]);
       daysWeather(days);
       currentConditions(data.currentConditions, data.address, days[0].description);
+      updateImage(data.currentConditions);
       
     } catch (error) {
       console.error('Response is not valid JSON:', error);
@@ -150,7 +161,42 @@ function daysWeather(days) {
 }
 
 
+function updateImage(currentCondition){
+  const main = document.querySelector("main");
 
+  let icon = "";
+  console.log(currentCondition.icon);
+  if(currentCondition.icon.toLowerCase().includes("partly-cloudy-night")){
+    
+    icon = "images/cloudy-night.jpg";
+    
+  }
+  else if(currentCondition.icon.toLowerCase().includes("snow")){
+    icon = "images/snowy.jpg";
+  }
+  else if(currentCondition.icon.toLowerCase().includes("rain")){
+    icon = "images/rain.jpg";
+  }
+  else if(currentCondition.icon.toLowerCase().includes("fog")){
+    icon = "images/fog.jpg";
+  }
+  else if(currentCondition.icon.toLowerCase().includes("wind")){
+    icon = "images/wind.jpg";
+  }
+  else if(currentCondition.icon.toLowerCase().includes("partly-cloudy-day")){
+    icon = "images/cloudy-day.jpg";
+  }
+  else if(currentCondition.icon.toLowerCase().includes("cloudy")){
+    icon = "images/cloudy.jpg";
+  }
+  else if(currentCondition.icon.toLowerCase().includes("clear-day")){
+    icon = "images/clear-day.jpg";
+  }
+  else if(currentCondition.icon.toLowerCase().includes("clear-night")){
+    icon = "images/clear-night.jpg";
+  }
+  main.style.backgroundImage = `url(${icon})`;
+}
 function getIcon(currentCondition){
   let icon = "";
   console.log(currentCondition.icon);
