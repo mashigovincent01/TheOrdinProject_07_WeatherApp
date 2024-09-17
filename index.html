@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5645b1461d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -23,208 +24,33 @@
     <main>
 
         <div id="weather-info">
-
+            <div id="search-div">
+                <input type="text" placeholder="Enter a town or city near you...">
+                <i class="fa-solid fa-magnifying-glass" onclick="search()"></i>
+            </div>
+            <h2 id="location">Pretoria</h2>
+            <div id="current-conditions">
+                <p id="p1">Current</p>
+                <div id="current-temp"><p>19</p> <span>&deg;C</span></div>
+                <p id="current-condition">Partly Cloudy</p>
+                
+            </div><p id="description">Partly cloudy throughout the day with late afternoon rain.</p>
         </div>
         
         <div id="weather-condition">
-            <div>
-                <h4>Today's Weather Condition</h4>
-                <div>
-                    <p class="condition">Huminity</p>
-                    <p class="value">20%</p>
-                </div>
-
-                <div>
-                    <p class="condition">Min Temperature</p>
-                    <p class="value">20%</p>
-                </div>
-
-                <div>
-                    <p class="condition">Max Temperature</p>
-                    <p class="value">20%</p>
-                </div>
-
-                <div>
-                    <p class="condition">Weather Condition</p>
-                    <p class="value">20%</p>
-                </div>
-
-                <div>
-                    <p class="condition">Wind Direction</p>
-                    <p class="value">20%</p>
-                </div>
-
-                <div>
-                    <p class="condition">Wind Speed</p>
-                    <p class="value">20%</p>
-                </div>
-
-                <div>
-                    <p class="condition">Rain Amount</p>
-                    <p class="value">20%</p>
-                </div>
-
-                <div>
-                    <p class="condition">Rain Probability</p>
-                    <p class="value">20%</p>
-                </div>
-                
-                <div>
-                    <p class="condition">Sunrise / Sunset</p>
-                    <p class="value">20%</p>
-                </div>
-                
-            </div>
+           
             
         </div>
         <div id="weather-days">
             <div id="weather-days-container">
-                <div class="day-card">
-                    <h3>Monday</h3>
-                    <div class="day-icon">
-                        <object type="image/svg+xml" data="images/animated/cloudy-day-1.svg" >
-                            Your browser does not support SVG animations.
-                          </object>
-                          
-
-                    </div>
-                    <div class="day-min-max">
-                        <p class="day-max">
-                            28
-                        </p>
-                        <p class="day-min">17</p>
-                    </div>
-                </div>
-
-                <div class="day-card">
-                        <h3>Monday</h3>
-                        <div class="day-icon">
-                            <object type="image/svg+xml" data="images/animated/cloudy-day-1.svg" >
-                                Your browser does not support SVG animations.
-                              </object>
-    
-                        </div>
-                        <div class="day-min-max">
-                            <p class="day-max">
-                                28
-                            </p>
-                            <p class="day-min">17</p>
-                        </div>
-                </div>
-                <div class="day-card">
-                    <h3>Monday</h3>
-                    <div class="day-icon">
-                        <object type="image/svg+xml" data="images/animated/cloudy-day-1.svg" >
-                            Your browser does not support SVG animations.
-                          </object>
-                    </div>
-                    <div class="day-min-max">
-                        <p class="day-max">
-                            28
-                        </p>
-                        <p class="day-min">17</p>
-                    </div>
-            </div>
-
-            <div class="day-card">
-                <h3>Monday</h3>
-                <div class="day-icon">
-                    <object type="image/svg+xml" data="images/animated/cloudy-day-1.svg" >
-                        Your browser does not support SVG animations.
-                      </object>
-                      
-
-                </div>
-                <div class="day-min-max">
-                    <p class="day-max">
-                        28
-                    </p>
-                    <p class="day-min">17</p>
-                </div>
-            </div>
-
-            <div class="day-card">
-                    <h3>Monday</h3>
-                    <div class="day-icon">
-                        <object type="image/svg+xml" data="images/animated/cloudy-day-1.svg" >
-                            Your browser does not support SVG animations.
-                          </object>
-
-                    </div>
-                    <div class="day-min-max">
-                        <p class="day-max">
-                            28
-                        </p>
-                        <p class="day-min">17</p>
-                    </div>
-            </div>
-            <div class="day-card">
-                <h3>Monday</h3>
-                <div class="day-icon">
-                    <object type="image/svg+xml" data="images/animated/cloudy-day-1.svg" >
-                        Your browser does not support SVG animations.
-                      </object>
-                </div>
-                <div class="day-min-max">
-                    <p class="day-max">
-                        28
-                    </p>
-                    <p class="day-min">17</p>
-                </div>
-        </div>
-
-        <div class="day-card">
-            <h3>Monday</h3>
-            <div class="day-icon">
-                <object type="image/svg+xml" data="images/animated/cloudy-day-1.svg" >
-                    Your browser does not support SVG animations.
-                  </object>
-                  
-
-            </div>
-            <div class="day-min-max">
-                <p class="day-max">
-                    28
-                </p>
-                <p class="day-min">17</p>
-            </div>
-        </div>
-
-        <div class="day-card">
-                <h3>Monday</h3>
-                <div class="day-icon">
-                    <object type="image/svg+xml" data="images/animated/cloudy-day-1.svg" >
-                        Your browser does not support SVG animations.
-                      </object>
-
-                </div>
-                <div class="day-min-max">
-                    <p class="day-max">
-                        28
-                    </p>
-                    <p class="day-min">17</p>
-                </div>
-        </div>
-        <div class="day-card">
-            <h3>Monday</h3>
-            <div class="day-icon">
-                <object type="image/svg+xml" data="images/animated/cloudy-day-1.svg" >
-                    Your browser does not support SVG animations.
-                  </object>
-            </div>
-            <div class="day-min-max">
-                <p class="day-max">
-                    28
-                </p>
-                <p class="day-min">17</p>
-            </div>
-    </div>
-
-                
+                              
         
              </div>
         </div>
     </main>
+    <footer>
+        by Mashigo VM &copy;2024
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>
