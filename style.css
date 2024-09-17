@@ -56,7 +56,7 @@ nav ul li a:hover::after{
 }
 
 body{
-    min-width: 360px;
+    min-width: 460px;
 }
 
 /* Main */
@@ -169,11 +169,11 @@ h4{
     font-size: 30px;
 }
 input{
-    flex-basis: 60%;
+    flex-basis: 80%;
     background-color: rgba(255, 255, 255, 0);
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
 }
 input:focus {
     outline: none;
@@ -280,5 +280,22 @@ nav .fas{
         top: 25px;
         left: 25px;
         cursor: pointer;
+    }
+     input{
+        font-size: 15px;
+        flex-basis: 80%;
+    }
+    #search i{
+        font-size: 20px
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 747px) {
+    /* Styles for screens between 601px and 747px */
+    input{
+        flex-basis: 90%;
+        font-size: 12px;
+        
     }
 }
