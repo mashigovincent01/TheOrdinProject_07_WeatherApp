@@ -56,7 +56,7 @@ nav ul li a:hover::after{
 }
 
 body{
-    min-width: 460px;
+    min-width: 360px;
 }
 
 /* Main */
